@@ -121,13 +121,39 @@ div, h1, h2, h3, h4, p{
 
 }
 
+.habilidades p{
+  text-align: left;
+  padding-top: 4rem;
+  width: 27%;
+  height: 25%;
+  
+}
+
+.habilidades p span{
+  background-image: linear-gradient(to right,  blue,red);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  .dark-mode &{
+    background-image: linear-gradient(to right,red, aqua);
+
+  }
+}
+
 .habilidades h2{
-  background-image: linear-gradient(to right, var(--gradient) 60%,rgb(1, 255, 1)) ;
+  background-image: linear-gradient(to right, rgb(1, 255, 1),rgb(9, 142, 142) 1%, rgb(1, 255, 1 ) );
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
   padding: 0;
   font-size: 5rem;
+  .dark-mode &{
+    background-image: linear-gradient(to right, var(--gradient) 15%,rgb(1, 255, 1)) ;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  font-size: 5rem;
+  }
 }
+
 
 .skills .logo:hover {
   top:0;
@@ -149,7 +175,7 @@ div, h1, h2, h3, h4, p{
 
 #Ds_img{
   float:left;
-  margin-right: 5rem;
+  margin-right: 10rem;
 
 }
 
