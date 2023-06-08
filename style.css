@@ -16,8 +16,8 @@
 }
 
 .dark-mode:root {
-  --bg: black;
   --link: blueviolet;
+  --bg: black;
   --default: white;
   --border: rgb(1, 255, 1);
   
@@ -90,7 +90,7 @@
 .presentation{
   left: 0;
   width: 100vw;
-  height: 85vh;
+  height: 97vh;
   background-image: linear-gradient(to bottom right, var(--gradient) 1%,var(--bg),var(--bg) );
   
 }
@@ -144,13 +144,12 @@ div, h1, h2, h3, h4, p{
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
   padding: 0;
-  font-size: 5rem;
+  font-size: 6rem;
   .dark-mode &{
     background-image: linear-gradient(to right, var(--gradient) 15%,rgb(1, 255, 1)) ;
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
   padding: 0;
-  font-size: 5rem;
   }
 }
 
@@ -166,6 +165,7 @@ div, h1, h2, h3, h4, p{
 
 /* ------------------------- ids ------------------------- */
 #title-projects{
+  font-size: 4rem;
   padding-top: 0.rem;
   align-items: center;
   justify-content: center;
@@ -185,3 +185,53 @@ div, h1, h2, h3, h4, p{
   width: 10.4rem;
   
 }
+/* ------------------------- projects ------------------------- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 0.5rem;
+}
+
+.container a{
+  text-decoration: none;
+}
+
+.grid-item {
+  margin: 1rem;
+  color: var(--default);
+  width: 375px;
+  height: 375px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 3px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 2px 2px 30px 1px var(--border);
+  padding: 15px;
+
+}
+
+.grid-item:hover{
+  transform: scale(102%);
+}
+
+.grid-item:nth-child(1) {
+  color: black;
+  background-image: url(contents/calculator.jpg);
+  background-size: 105%;
+}
+
+.grid-item:nth-child(2) {
+  color: var(--default);
+  background-image: url(contents/logo\ python.png);
+  background-size: 75%;
+}
+
+.grid-item:nth-child(n+3) {
+  background-image: url(contents/5267846.png);
+  background-size: 50%;
+}
+
+
+
