@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 250px;
+  height: 250px;
+}
+input[type="radio"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="radio"]:checked {
+  background-color:green;
+}

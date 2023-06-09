@@ -9,14 +9,24 @@
   </head>
   <body>
     <header>
-      <div id="header">
-        <a href="">home</a>
-        <a href="">skills</a>
-        <a href="">projects</a>
-        <a href="">about</a>
-        <a href="">contact</a>
-        <div class="dark" id="dark_button">ligth</div>
-      </div>
+      <nav id="header">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li>
+            <a href="#title-projects">projects</a>
+          </li>
+          <li><a href="#">about</a></li>
+          <li>
+            <a href="#" id="contatos">contact</a>
+            <ul class="submenu-conatos">
+              <li>github</li>
+              <li>whatsapp</li>
+              <li>linkedin</li>
+            </ul>
+          </li>
+          <div id="dark_button">ligth</div>
+        </ul>
+      </nav>
 
       <nav id="menu" class=""></nav>
     </header>
@@ -72,7 +82,7 @@
 
       <div>
         <hr />
-        <h1 id="title-projects">Projects</h1>
+        <h1 id="title-projects" class="projects">Projects</h1>
         <div class="container">
           <a href="projetos/calculadora/calculadora.html" target="_blank">
             <div class="grid-item">Calculadora</div>

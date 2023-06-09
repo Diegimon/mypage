@@ -22,8 +22,10 @@
   --border: rgb(1, 255, 1);
   
 }
-
-#header {
+/* -------------------------------------- menu -------------------------------------- */
+#header ul {
+  padding-top: 0.2rem;
+  list-style-type: none;
   text-align: center;
   display: flex;
   position: fixed;
@@ -43,28 +45,48 @@
   height: 5px;
   text-decoration: none;
   padding: 5px;
-  
 }
 
 #header a::after {
   content: ' ';
+  left: 0;
+  bottom: 1px;
   width: 0%;
   height: 0.2rem; 
   background-color: var(--border);
   position: absolute;
-  left: 0;
-  bottom: -1rem;
   transition: 0.5s ease-in-out;
 }
 
-
-#header a:hover::after {
+#header a:hover::after { 
   width: 100%;
- 
+}
+/* -------------------------------------- submenu -------------------------------------- */
+
+#header ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
 }
 
-.dark{
-  top: 0.5rem;
+#header a:hover + ul {
+  left: 6.5rem;
+  width: 550px;
+  display: inline;
+  background-color: rgb(37, 37, 37);
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+}
+
+#header a:hover + ul li{
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: auto;
+}
+
+
+#dark_button{
   right: 0;
   width: 6rem;
   height: 0.6rem;
@@ -81,25 +103,24 @@
   }
 }
 
-.dark:hover{
+#dark_button:hover{
   transform: scale(97%);
 }
 
 
 /* ------------------------- body ------------------------- */
+
+body{
+  padding-top: 1.7rem;
+  color: var(--default);
+  background-color: var(--bg);  
+}
+
 .presentation{
   left: 0;
   width: 100vw;
   height: 97vh;
   background-image: linear-gradient(to bottom right, var(--gradient) 1%,var(--bg),var(--bg) );
-  
-}
-
-body{
-  padding-top: 2rem;
-  color: var(--default);
-  background-color: var(--bg);
- 
   
 }
 

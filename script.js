@@ -15,3 +15,18 @@ function change_mode() {
     divBotao.textContent = 'Dark'
   }
 }
+// ------------------------------- botão submenu -------------------------------
+var scrollLinks = document.querySelectorAll('.scroll-link')
+
+scrollLinks.forEach(function (link) {
+  link.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    var targetSelector = link.getAttribute('data-target')
+    var targetElement = document.querySelector(targetSelector)
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' })
+    }
+  })
+})

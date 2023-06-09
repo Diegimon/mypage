@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jokenpo</title>
+  </head>
+  <body>
+    <form action="" name="jokenpo">
+      <input type="radio" name="grupo" id="pedra" />
+      <label for="pedra">
+        <img src="contents/pedra.png" alt="" />
+      </label>
+      <input type="radio" name="grupo" id="papel" />
+      <label for="papel">
+        <img src="contents/papel.png" alt="" />
+      </label>
+      <input type="radio" name="grupo" id="tesoura" />
+      <label for="tesoura">
+        <img src="contents/tesoura.png" alt="" />
+      </label>
+      <p>
+        <input type="button" value="jogar" onclick="jogar()" />
+        <input type="button" value="reset" onclick="reset()" />
+      </p>
+    </form>
+    <hr />
+    <h3>Computador:</h3>
+    <img src="contents/pc.png" alt="pc" id="pc" />
+    <hr />
+    <h3 id="placar"></h3>
+    <script src="script.js"></script>
+  </body>
+</html>
