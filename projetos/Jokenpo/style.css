@@ -2,15 +2,54 @@
   margin: 0;
   padding: 0;
 }
+
 img {
   width: 250px;
   height: 250px;
 }
-input[type="radio"] {
-  padding: 5px;
-  border: 1px solid #ccc;
+
+form{
+  text-align: center;
+  display: flex;
+
 }
 
-input[type="radio"]:checked {
-  background-color:green;
+input[type="radio"] {
+  
+  appearance: none; 
+  outline: none; 
+  padding: 5px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+label img:hover {
+  transform: scale(120%);
+}
+
+input[type="radio"]:checked + label img {
+  background-color: aqua;
+}
+
+
+.play{
+  margin-left: 3rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  width: 15rem;
+  height: 7.5rem;
+  border-radius: 4rem;
+}
+
+.play:hover{
+  transform: scale(97%);
+}
+.play:checked{
+  background-color: red;
+}
+
+#placar{
+  padding-top: 3rem;
+  font-size: 7rem;
+  text-align: center;
 }
