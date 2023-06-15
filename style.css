@@ -7,19 +7,21 @@
 
 :root{
   --bg: white;
-  --gradient: aqua;
   --link: rgb(36, 36, 205);
   --link2:red;
   --default: black;
   --border: black;
   --bgr: 1.4rem;
+  --gradient: aqua;
+  --gradient2: rgb(1, 255, 1);
+  --gradient3: rgb(9, 142, 142);
 }
 
 .dark-mode:root {
   --link: blueviolet;
   --bg: black;
   --default: white;
-  --border: rgb(1, 255, 1);
+  --border: rgb(10, 255, 133);
   
 }
 /* -------------------------------------- menu -------------------------------------- */
@@ -93,9 +95,9 @@
   position: fixed;
   text-align: center;
   cursor: pointer;
-  color: yellow;
+  color: var(--bg);
   background-color: black;
-  border: 3px solid ;  
+  border: 3px solid var(--gradient2);  
   border-radius: var(--bgr) ;
   .dark-mode &{
     border: 3px solid var(--border);
@@ -119,10 +121,11 @@ body{
 .presentation{
   left: 0;
   width: 100vw;
-  height: 97vh;
+  height: 87vh auto;
   background-image: linear-gradient(to bottom right, var(--gradient) 1%,var(--bg),var(--bg) );
-  
+  border-bottom: 2px solid var(--border);  
 }
+
 
 div, h1, h2, h3, h4, p{
   padding-bottom: 0.5rem;
@@ -143,34 +146,31 @@ div, h1, h2, h3, h4, p{
 }
 
 .habilidades p{
-  text-align: left;
-  padding-top: 4rem;
-  width: 27%;
-  height: 25%;
+  margin-top: 1.5rem;
+  width: 100vw;
   
 }
 
 .habilidades p span{
-  background-image: linear-gradient(to right,  blue,red);
-  -webkit-background-clip:text;
+  background-image: linear-gradient(to right, var(--link),var(--gradient));
+    -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
   .dark-mode &{
-    background-image: linear-gradient(to right,red, aqua);
+    background-image: linear-gradient(to right, var(--gradient),var(--gradient2));
 
   }
 }
 
 .habilidades h2{
   font-size: 4rem;
-  background-image: linear-gradient(to right, rgb(1, 255, 1),rgb(9, 142, 142) 1%, rgb(1, 255, 1 ) );
+  background-image: linear-gradient(to right,var(--link) 1%, var(--gradient) );
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
   padding: 0;
   .dark-mode &{
-    background-image: linear-gradient(to right, var(--gradient) 15%,rgb(1, 255, 1)) ;
+    background-image: linear-gradient(to right, var(--gradient) 15%,var(--gradient2)) ;
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
-  padding: 0;
   }
 }
 
@@ -194,9 +194,10 @@ div, h1, h2, h3, h4, p{
 
 }
 
-#Ds_img{
+#Ds_img{  
   float:left;
   margin-right: 10rem;
+  margin-bottom: 4rem;
 
 }
 
@@ -208,57 +209,179 @@ div, h1, h2, h3, h4, p{
 }
 /* ------------------------- projects ------------------------- */
 .container {
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  gap: 0.5rem;
-}
-
-.container a{
-  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .grid-item {
+  flex: 0 0 45%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
   margin: 1rem;
-  color: var(--default);
-  width: 375px;
-  height: 375px;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  border: 3px solid var(--border);
-  border-radius: 15px;
-  box-shadow: 2px 2px 30px 1px var(--border);
-  padding: 15px;
-
-}
-
-.grid-item:hover{
-  transform: scale(102%);
-}
-
-.grid-item:nth-child(1) {
-  color: var(--default);
-  background-image: url(contents/calculator.jpg);
-  background-size: 105%;
-}
-
-.grid-item:nth-child(2) {
-  color: var(--default);
-  background-image: url(contents/logo\ python.png);
-  background-size: 75%;
-}
-
-.grid-item:nth-child(3) {
-  column-rule: var(--default);
-  background-color: green;
-  /* background-image: url(contents/unnamed.png); */
-}
-
-.grid-item:nth-child(n+4) {
-  background-image: url(contents/5267846.png);
-  background-size: 50%;
+  box-shadow: 0px 0cm 10px var(--border);
 }
 
 
+.grid-item img {
+  width: 5rem;
+  margin-right: 10px;
+  margin-left: 0.4rem;
+  border-radius: 0.5rem;
+}
 
+.grid-item h2{
+  font-size: larger;
+  margin-top: 0.6rem;
+}
+
+.grid-item a{
+  top: 0;
+  margin: .5rem;
+  padding: 0.3rem;
+  text-decoration: none;
+  color: var(--link);
+  border-radius: 0.2rem;
+  .dark-mode &{
+    color: var(--gradient);
+  }
+}
+
+.grid-item a:hover{
+  transform: scale(115%);
+}
+
+.grid-item .text {
+  /* Estilos para o texto ao lado da imagem */
+}
+
+
+/* ------------------------- responsividade ------------------------- */
+
+/* ------------------------- computador ------------------------- */
+
+@media screen and (max-width: 1023px) {
+  *{
+    font-size: 25px;
+  }
+
+  #Ds_img img{
+    width: 14rem;
+  }
+  
+  .presentation{
+    height: 55vh ;
+  }
+
+
+  .habilidades {
+    display: grid;
+    
+  }
+
+  .habilidades p{
+    font-size: 30px;
+    width: 50vw;
+  }
+
+  .habilidades span{
+    font-size: 40px;
+  }
+
+
+  
+}
+
+/* ------------------------- celulares ------------------------- */
+
+@media screen and (max-width: 768px) and (min-width: 400px) {
+*{
+  font-size: 15px;
+}
+
+  #Ds_img{
+    width: 1.5rem;
+  }
+
+  #Ds_img h1{
+    display: none;
+  }
+
+  .presentation{
+    display: flex;
+    padding: 0;
+    align-content: flex-start;
+    text-align: left;
+    height: auto;
+  }
+
+
+
+  .habilidades{
+    left: 0;
+    display: block;
+    text-align: left;
+    padding-top: 18rem;
+    width: .5rem;
+    position: relative;
+    bottom: 0;
+  }
+
+  .habilidades h2{
+    font-size: 2.3rem;
+    text-align: left;
+    width: 300px;
+    right: 0;
+    background-color: aqua;
+    
+  }
+
+ .habilidades p{
+  display: none;
+  
+ }
+
+ .grid-item{
+  padding: .5rem;
+  font-size: none;
+  width: 20rem;
+  height: 5rem;
+ }
+
+ .grid-item p{
+  display: none;
+ }
+  
+}
+
+@media screen and (max-width: 400px) {
+  #header{
+    font-size: medium;
+  }
+
+  #header a{
+    margin-left: .7rem;
+    padding: 0px;
+  }
+
+  #Ds_img{
+    display: none;
+  }
+
+  .presentation{
+    height: 75vh;
+  }
+
+  .habilidades p{
+    font-size: 1rem;
+    width: 100vw;
+  }
+
+  .grid-item p{
+    display: none;
+  }
+  
+
+}
