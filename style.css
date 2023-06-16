@@ -152,14 +152,13 @@ div, h1, h2, h3, h4, p{
 }
 
 .habilidades p span{
-  background-image: linear-gradient(to right, var(--link),var(--gradient));
-    -webkit-background-clip:text;
+  background-image: url(contents/szivárvány-háttér-rainbow-background.gif);
+  -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
-  .dark-mode &{
-    background-image: linear-gradient(to right, var(--gradient),var(--gradient2));
-
-  }
+  
 }
+
+
 
 .habilidades h2{
   font-size: 4rem;
@@ -167,7 +166,7 @@ div, h1, h2, h3, h4, p{
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
   padding: 0;
-  .dark-mode &{
+  .dark-mode &{     
     background-image: linear-gradient(to right, var(--gradient) 15%,var(--gradient2)) ;
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
