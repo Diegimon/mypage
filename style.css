@@ -10,7 +10,7 @@
   --link: rgb(36, 36, 205);
   --link2:red;
   --default: black;
-  --border: black;
+  --border: rgb(36, 36, 205);
   --bgr: 1.4rem;
   --gradient: aqua;
   --gradient2: rgb(1, 255, 1);
@@ -55,9 +55,10 @@
   bottom: 1px;
   width: 0%;
   height: 0.2rem; 
-  background-color: var(--border);
   position: absolute;
   transition: 0.5s ease-in-out;
+  background-color: var(--border);
+  
 }
 
 #header a:hover::after { 
@@ -66,27 +67,21 @@
 /* -------------------------------------- submenu -------------------------------------- */
 
 #header ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-}
-
-#header a:hover + ul {
-  left: 6.5rem;
+  position: relative;
   width: 550px;
   display: inline;
   background-color: rgb(37, 37, 37);
   border-top: none;
   border-radius: 0 0 15px 15px;
+  cursor: pointer; 
 }
 
-#header a:hover + ul li{
+#header ul ul li{
   border-radius: 15px;
   display: inline-block;
   width: 150px;
   height: auto;
 }
-
 
 #dark_button{
   right: 0;
@@ -131,6 +126,56 @@ div, h1, h2, h3, h4, p{
   padding-bottom: 0.5rem;
 }
 
+.contacts{
+  left: 0;
+  display: flex;  
+  width: 250px;
+  height: 100px; 
+  text-align: left;
+  justify-content: left;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.contacts a{
+  text-decoration: none;
+  color: var(--bgr);
+  margin-right: 0.7rem;
+  transform: scale(125%);
+  cursor: pointer;  
+  height: 30px;
+  border-radius: 1rem;
+}
+
+.contacts  a:nth-child(1):hover{
+  transform: scale(130%);
+  color: red;  
+}
+
+.contacts  a:nth-child(2):hover{
+  transform: scale(130%);
+  color: orangered;  
+}
+
+.contacts  a:nth-child(3):hover{
+  transform: scale(130%);
+  color: black;
+  padding: -1px;
+  background-color: #fff;
+
+}
+
+.contacts  a:nth-child(4):hover{
+  transform: scale(130%);
+  color: var(--gradient3);
+}
+
+.contacts  a:nth-child(5):hover{
+  transform: scale(130%);
+  color: green;
+}
+
+
 .skills{
   display: flex;
   width: 21rem ;
@@ -141,8 +186,6 @@ div, h1, h2, h3, h4, p{
   justify-content: center;
   border: 3px solid var(--border);
   transform: scale(100%);
-
-
 }
 
 .habilidades p{
@@ -186,10 +229,8 @@ div, h1, h2, h3, h4, p{
 /* ------------------------- ids ------------------------- */
 #title-projects{
   font-size: 4rem;
-  padding-top: 0.rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding-top: 0.rem;  
+  text-align: left;
 
 }
 
