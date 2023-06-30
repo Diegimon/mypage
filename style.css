@@ -37,7 +37,7 @@
   height: 1.5rem;
   background-color: var(--bg);
   border-bottom: 2px solid var(--border);
-  z-index: 1;
+  z-index: 2;
 }
 
 #header a {
@@ -227,74 +227,60 @@ div, h1, h2, h3, h4, p{
 }
 
 /* ------------------------- ids ------------------------- */
-#title-projects{
-  font-size: 4rem;
-  padding-top: 0.rem;  
-  text-align: left;
-
-}
 
 #Ds_img{  
   float:left;
   margin-right: 10rem;
   margin-bottom: 4rem;
-
+  
 }
 
 #Ds_img img
- {
+{
   border-radius: 17rem;
   width: 10.4rem;
   
 }
 /* ------------------------- projects ------------------------- */
-.container {
-  display: flex;
-  flex-wrap: wrap;
+.projects{
+  width: 100vw;
+  padding: 1rem;
 }
 
-.grid-item {
-  flex: 0 0 45%;
-  display: flex;
+.projects h1{  
+  font-size: 4rem;
+  text-align: left;
+  
+}
+
+.swiper-slide{
+  justify-content: center;
+  text-align: center;
   align-items: center;
-  margin-bottom: 20px;
-  border: 2px solid var(--border);
-  border-radius: 0.5rem;
-  margin: 1rem;
-  box-shadow: 0px 0cm 10px var(--border);
+  display: inline-flex;  
+  width: auto;
+  height: auto;
 }
 
-
-.grid-item img {
-  width: 5rem;
-  margin-right: 10px;
-  margin-left: 0.4rem;
-  border-radius: 0.5rem;
-}
-
-.grid-item h2{
-  font-size: larger;
-  margin-top: 0.6rem;
-}
-
-.grid-item a{
-  top: 0;
-  margin: .5rem;
-  padding: 0.3rem;
+.swiper-slide a{
+  padding-top: 1rem;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  height: auto;
   text-decoration: none;
-  color: var(--link);
-  border-radius: 0.2rem;
-  .dark-mode &{
-    color: var(--gradient);
-  }
+  color: var(--default);
+}
+.swiper-slide a img{
+  border-radius: 1rem;
+  width: 18rem;
+  height: auto;
 }
 
-.grid-item a:hover{
-  transform: scale(115%);
-}
-
-.grid-item .text {
-  /* Estilos para o texto ao lado da imagem */
+.swiper-pagination-bullet{
+  background-color: var(--border);
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 
@@ -342,10 +328,7 @@ div, h1, h2, h3, h4, p{
 }
 
   #Ds_img{
-    width: 1.5rem;
-  }
-
-  #Ds_img h1{
+    width: 1rem;
     display: none;
   }
 
@@ -356,49 +339,41 @@ div, h1, h2, h3, h4, p{
     text-align: left;
     height: auto;
   }
-
-
-
+    
   .habilidades{
+    margin-left: .5rem;
+    padding-top: 1rem;
     left: 0;
     display: block;
     text-align: left;
-    padding-top: 18rem;
-    width: .5rem;
+    width: 100vw;
     position: relative;
     bottom: 0;
   }
 
   .habilidades h2{
-    font-size: 2.3rem;
+    font-size: 4rem;
     text-align: left;
-    width: 300px;
+    width: 500px;
     right: 0;
     background-color: aqua;
     
   }
+ 
+  .skills{
+    width: 23rem;
+  }
 
- .habilidades p{
-  display: none;
-  
- }
+  .skill .logo{
+    height: 4rem;
+  }
 
- .grid-item{
-  padding: .5rem;
-  font-size: none;
-  width: 20rem;
-  height: 5rem;
- }
-
- .grid-item p{
-  display: none;
- }
   
 }
 
 @media screen and (max-width: 400px) {
   #header{
-    font-size: medium;
+    font-size: small;
   }
 
   #header a{
@@ -410,18 +385,95 @@ div, h1, h2, h3, h4, p{
     display: none;
   }
 
+  body{
+    margin: 0;
+    padding: 0;
+  }
+
   .presentation{
+    margin-top: 2rem;
     height: 75vh;
   }
+
+  .habilidades h2{
+    font-size: 2.7rem;
+  }  
 
   .habilidades p{
     font-size: 1rem;
     width: 100vw;
   }
+  .habilidades p span{
+    font-size: 1rem;
+  }
 
-  .grid-item p{
-    display: none;
+  .skills{
+    display: flex;
+  width: 15rem ;
+  height: 2.4rem;
+  border-radius: var(--bgr);
+  padding: 0.3rem;
+  mask-position: 2rem;
+  justify-content: center;
+  border: 3px solid var(--border);
+  transform: scale(100%);
+  }
+
+  .skills .logo{
+    height: 75%;
+  }
+
+  .projects{
+    width: 100vw;
+    padding: 1rem;
   }
   
+  .projects h1{  
+    font-size: 4rem;
+    text-align: left;
+    
+  }
+
+  .swiper{
+    padding: 0;
+    margin: 0;
+  }
+
+  .swiper-slide{    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: block;  
+    width: auto;
+    height: auto;
+  }
+  
+  .swiper-slide a{
+    padding-top: 1rem;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    text-decoration: none;
+    color: var(--default);
+  }
+
+  .swiper-slide:nth-child(3){
+    display: none;
+
+  }
+
+  .swiper-slide a img{
+    border-radius: 1rem;
+    width: 18rem;
+    height: auto;
+  }
+
+  .swiper-pagination-bullet{
+    background-color: var(--border);
+    width: 0.75rem;
+    height: 0.75rem;
+  }
 
 }

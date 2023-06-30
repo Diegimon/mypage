@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="contents/icomoon (3)/style.css">
+    <link rel="stylesheet" href="contents/icomoon (3)/style.css" />
     <title>Meu portifório</title>
   </head>
   <body>
-    <header> 
+    <header>
       <nav id="header">
         <ul>
           <li><a href="#">home</a></li>
@@ -19,10 +23,10 @@
           <li><a href="#">about</a></li>
           <li>
             <a href="#">contact</a>
-            
+          </li>
+
           <li>
             <div id="dark_button">ligth</div>
-
           </li>
         </ul>
       </nav>
@@ -40,14 +44,34 @@
           <figcaption>
             <h1>Diego Silva Aguiar</h1>
             <div class="contacts">
-              <a href="contents/Curriculo_diego.pdf" class="icon-file-pdf" download target="_blank"></a>
-              <a href="mailto:dscontac@hotmail.com" class="icon-mail2" target="_blank"></a>
-              <a href="https://github.com/diegimon" class="icon-github" target="_blank"></a>
-              <a href="https://www.linkedin.com/in/diego-silva-39bb8a228
-              " class="icon-linkedin2" target="_blank"></a>
-              <a href="https://api.whatsapp.com/send?phone=996528343
-              " class="icon-whatsapp" target="_blank"></a>
-              
+              <a
+                href="contents/Curriculo_diego.pdf"
+                class="icon-file-pdf"
+                download
+                target="_blank"
+              ></a>
+              <a
+                href="mailto:dscontac@hotmail.com"
+                class="icon-mail2"
+                target="_blank"
+              ></a>
+              <a
+                href="https://github.com/diegimon"
+                class="icon-github"
+                target="_blank"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/diego-silva-39bb8a228
+              "
+                class="icon-linkedin2"
+                target="_blank"
+              ></a>
+              <a
+                href="https://api.whatsapp.com/send?phone=996528343
+              "
+                class="icon-whatsapp"
+                target="_blank"
+              ></a>
             </div>
           </figcaption>
         </figure>
@@ -91,39 +115,42 @@
         </div>
       </div>
 
-      <div>
-        <h1 id="title-projects" class="projects">Projects</h1>
-        <p style="color: red;">The projects are only examples because my projects already in proguess now</p>
-        <div class="container">
-          <div class="grid-item">
-              <img src="contents/calculator.jpg" alt="calculadora" />            
-            <div class="text">
-              <h2>calculadora</h2>
-              <p>
-                Uma calculadora virtual simples que desenvolvi apenas para treinar meu conhecimento em javascript, esse miniprojeto por incrivel que pareça eu nunca havia realizado antes portanto foi um teste de habilidades.
-              </p>
+      <div class="projects swiper">
+        <h1>Projects</h1>
+        <p style="color: red">
+          The projects are only examples because my projects already in proguess
+          now
+        </p>
+
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="projetos/calculadora/calculadora.html" target="_blank"
+                ><figure>
+                  <img src="contents/calculator.jpg" alt="Calculadtor" />
+                </figure>
+                <figcaption>calculator</figcaption></a
+              >
             </div>
-            <a class="icon-search" href="projetos/calculadora/calculadora.html" target="_blank"></a>            
-          </div>
-          <div class="grid-item">
-            <img src="contents/jogovelha.jpg">
-            <div class="text">
-              <h2>Jogo da velha</h2>
-              <p>O projeto clássico que permite que jogue com duas pessoas randomizando sua própia escolha e comparando os resultados, em breve irei aperfeiçoar este projeto com animações</p>
+            <div class="swiper-slide">
+              <a href="projetos/jog.velha/velha.html" target="_blank"
+                ><figure>
+                  <img src="contents/jogovelha.jpg" alt="Jogo da velha" />
+                </figure>
+                <figcaption>Minigame 2 players</figcaption></a
+              >
             </div>
-            <a class="icon-search" href="projetos/jog.velha/velha.html" target="_blank"></a>            
-          </div>
-          <div class="grid-item">
-            <img src="contents/logo python.png" alt="python">
-            <div class="text">
-              <h2>Finalizando</h2>
-              <p>Projeto em produção...</p>
+            <div class="swiper-slide">
+              <img src="contents/5267846.png" alt="" />
             </div>
           </div>
-        
-        
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
