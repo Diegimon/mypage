@@ -61,7 +61,7 @@
   
 }
 
-#header a:hover::after { 
+#header ul li a:hover::after { 
   width: 100%;
 }
 /* -------------------------------------- submenu -------------------------------------- */
@@ -83,6 +83,16 @@
   height: auto;
 }
 
+#languages{  
+
+  display: inline-block;
+  position: absolute;
+  right: 7rem;
+
+}
+
+
+
 #dark_button{
   right: 0;
   width: 6rem;
@@ -92,7 +102,7 @@
   cursor: pointer;
   color: var(--bg);
   background-color: black;
-  border: 3px solid var(--gradient2);  
+  border: 3px solid var(--gradient);  
   border-radius: var(--bgr) ;
   .dark-mode &{
     border: 3px solid var(--border);
@@ -115,8 +125,8 @@ body{
 
 .presentation{
   left: 0;
-  width: 100vw;
-  height: 87vh auto;
+  width: 97vw;
+  height: 100vh ;
   background-image: linear-gradient(to bottom right, var(--gradient) 1%,var(--bg),var(--bg) );
   border-bottom: 2px solid var(--border);  
 }
@@ -126,7 +136,7 @@ div, h1, h2, h3, h4, p{
   padding-bottom: 0.5rem;
 }
 
-.contacts{
+#contacts{
   left: 0;
   display: flex;  
   width: 250px;
@@ -137,7 +147,7 @@ div, h1, h2, h3, h4, p{
   padding-left: 15px;
 }
 
-.contacts a{
+#contacts a{
   text-decoration: none;
   color: var(--bgr);
   margin-right: 0.7rem;
@@ -147,17 +157,17 @@ div, h1, h2, h3, h4, p{
   border-radius: 1rem;
 }
 
-.contacts  a:nth-child(1):hover{
+#contacts  a:nth-child(1):hover{
   transform: scale(130%);
   color: red;  
 }
 
-.contacts  a:nth-child(2):hover{
+#contacts  a:nth-child(2):hover{
   transform: scale(130%);
   color: orangered;  
 }
 
-.contacts  a:nth-child(3):hover{
+#contacts  a:nth-child(3):hover{
   transform: scale(130%);
   color: black;
   padding: -1px;
@@ -165,24 +175,25 @@ div, h1, h2, h3, h4, p{
 
 }
 
-.contacts  a:nth-child(4):hover{
+#contacts  a:nth-child(4):hover{
   transform: scale(130%);
   color: var(--gradient3);
 }
 
-.contacts  a:nth-child(5):hover{
+#contacts  a:nth-child(5):hover{
   transform: scale(130%);
   color: green;
 }
 
 
 .skills{
+  position: relative;
+  margin: 0;
   display: flex;
   width: 21rem ;
   height: 2.4rem;
   border-radius: var(--bgr);
   padding: 0.3rem;
-  mask-position: 2rem;
   justify-content: center;
   border: 3px solid var(--border);
   transform: scale(100%);
@@ -228,7 +239,8 @@ div, h1, h2, h3, h4, p{
 
 /* ------------------------- ids ------------------------- */
 
-#Ds_img{  
+#Ds_img{ 
+  margin-left: 30px; 
   float:left;
   margin-right: 10rem;
   margin-bottom: 4rem;
@@ -263,6 +275,7 @@ div, h1, h2, h3, h4, p{
 }
 
 .swiper-slide a{
+  width: 977px;
   padding-top: 1rem;
   align-content: center;
   text-align: center;
@@ -270,7 +283,12 @@ div, h1, h2, h3, h4, p{
   height: auto;
   text-decoration: none;
   color: var(--default);
+  border-radius: 1rem ;
+  box-shadow: rgba(84, 86, 84, 0.324)  1px 1px 1px 1px;
 }
+
+
+
 .swiper-slide a img{
   border-radius: 1rem;
   width: 18rem;
@@ -283,46 +301,49 @@ div, h1, h2, h3, h4, p{
   height: 0.75rem;
 }
 
+.pulse {
+  animation: pulse-animation 1s infinite;
+}
 
-/* ------------------------- responsividade ------------------------- */
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-/* ------------------------- computador ------------------------- */
+/* ------------------------- computadores ------------------------- */
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1342px) {
   *{
     font-size: 25px;
   }
 
-  #Ds_img img{
+  #Ds_img {
+    margin-right: 0;
+    margin: 0;
     width: 14rem;
+    transform: scale(95%);
   }
-  
-  .presentation{
-    height: 55vh ;
-  }
-
-
-  .habilidades {
-    display: grid;
-    
-  }
-
-  .habilidades p{
-    font-size: 30px;
-    width: 50vw;
-  }
-
-  .habilidades span{
-    font-size: 40px;
-  }
-
-
+ 
   
 }
+@media screen and (max-width: 923px) {
+  .presentation{
+    width: 100vw;
+  }
+ 
 
-/* ------------------------- celulares ------------------------- */
+}
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
+/* ------------------------- tablets ------------------------- */
+
+@media screen and (max-width: 896px) and (min-width: 400px) {
 *{
   font-size: 15px;
 }
@@ -330,6 +351,11 @@ div, h1, h2, h3, h4, p{
   #Ds_img{
     width: 1rem;
     display: none;
+  }
+
+  #languages{
+    top: 0;
+    transform: scale(60%);
   }
 
   .presentation{
@@ -371,18 +397,28 @@ div, h1, h2, h3, h4, p{
   
 }
 
-@media screen and (max-width: 400px) {
+/* ------------------------- Celulares ------------------------- */
+
+@media screen and (max-width: 506px ) and (min-width:387px){
   #header{
-    font-size: small;
+  }
+  
+  body{
+    padding-top: 0;
+    margin: 0;
   }
 
-  #header a{
-    margin-left: .7rem;
-    padding: 0px;
+  .habilidades p{
+    display: none;
   }
 
   #Ds_img{
     display: none;
+  }
+
+  #languages{
+    display: none;
+   
   }
 
   body{
@@ -457,12 +493,7 @@ div, h1, h2, h3, h4, p{
     height: auto;
     text-decoration: none;
     color: var(--default);
-  }
-
-  .swiper-slide:nth-child(3){
-    display: none;
-
-  }
+  }  
 
   .swiper-slide a img{
     border-radius: 1rem;
@@ -476,4 +507,21 @@ div, h1, h2, h3, h4, p{
     height: 0.75rem;
   }
 
+}
+
+@media screen and (max-width:386px) {
+  *{
+    font-size: 7px;
+  }
+
+  #languages{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: -1.4rem;
+    transform: scale(40%);
+  }
+
+ 
+  
 }

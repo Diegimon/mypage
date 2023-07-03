@@ -16,22 +16,21 @@
     <header>
       <nav id="header">
         <ul>
-          <li><a href="#">home</a></li>
+          <li><a href="#" translate="no">home</a></li>
           <li>
-            <a href="#title-projects">projects</a>
+            <a href="#projects" onclick="pulsar('projects')">projects</a>
           </li>
-          <li><a href="#">about</a></li>
+          <li><a href="#" onclick="pulsar('about')">about</a></li>
           <li>
-            <a href="#">contact</a>
+            <a href="#" onclick="pulsar('contacts')">contact</a>
           </li>
 
+          <div id="languages" class="gtranslate_wrapper"></div>
           <li>
-            <div id="dark_button">ligth</div>
+            <div id="dark_button" translate="no">ligth</div>
           </li>
         </ul>
       </nav>
-
-      <nav id="menu" class=""></nav>
     </header>
 
     <main>
@@ -43,7 +42,8 @@
           />
           <figcaption>
             <h1>Diego Silva Aguiar</h1>
-            <div class="contacts">
+
+            <div id="contacts">
               <a
                 href="contents/Curriculo_diego.pdf"
                 class="icon-file-pdf"
@@ -75,8 +75,9 @@
             </div>
           </figcaption>
         </figure>
+
         <div class="habilidades">
-          <h2>Full- Stack</h2>
+          <h2 translate="no">Full- Stack</h2>
           <div class="skills">
             <img
               class="logo"
@@ -106,7 +107,7 @@
               alt="java"
             />
           </div>
-          <p>
+          <p id="about">
             Hi my name is diego silva, I'm a computer science student and a
             great programmer, despite not having professional experience I keep
             some projects here I hope they can interest you my dear visitor!
@@ -116,7 +117,7 @@
       </div>
 
       <div class="projects swiper">
-        <h1>Projects</h1>
+        <h1 id="projects" translate="no">Projects</h1>
         <p style="color: red">
           The projects are only examples because my projects already in proguess
           now
@@ -126,6 +127,14 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="projetos/nlw/index.html" target="_blank"
+                ><figure>
+                  <img src="contents/beauty salon.jpeg" alt="Beauty_saloon" />
+                </figure>
+                <figcaption>Beauty saloon</figcaption></a
+              >
+            </div>
             <div class="swiper-slide">
               <a href="projetos/calculadora/calculadora.html" target="_blank"
                 ><figure>
@@ -139,18 +148,33 @@
                 ><figure>
                   <img src="contents/jogovelha.jpg" alt="Jogo da velha" />
                 </figure>
-                <figcaption>Minigame 2 players</figcaption></a
+                <figcaption>Velha 2 players</figcaption></a
               >
-            </div>
-            <div class="swiper-slide">
-              <img src="contents/5267846.png" alt="" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </main>
+    <!-- roleta -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- tradutor -->
+    <script>
+      window.gtranslateSettings = {
+        default_language: 'en',
+        native_language_names: true,
+        languages: ['en', 'pt', 'es'],
+        wrapper_selector: '.gtranslate_wrapper',
+        alt_flags: { en: 'usa', pt: 'brazil' }
+      }
+    </script>
+    <script
+      src="https://cdn.gtranslate.net/widgets/latest/flags.js"
+      defer
+    ></script>
+    <!-- main -->
     <script src="script.js"></script>
   </body>
 </html>

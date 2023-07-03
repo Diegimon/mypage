@@ -30,7 +30,7 @@ scrollLinks.forEach(function (link) {
     }
   })
 })
-// ------------------------------- swiiper -------------------------------
+// ------------------------------- swiper -------------------------------
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   slidesPerView: 1,
@@ -40,3 +40,12 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   keyboard: true
 })
+
+// ------------------------------- pulse -------------------------------
+function pulsar(targetId) {
+  var item = document.getElementById(targetId)
+  item.classList.add('pulse')
+  setTimeout(function () {
+    item.classList.remove('pulse')
+  }, 1000) // Tempo em milissegundos (1 segundo)
+}
