@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <div>
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+        <img src="../contents/logo c.png" alt="C" class="icon" />
+      </div>
+    </section>
+  </body>
+  <script>
+    const icons = document.querySelectorAll('.icon')
+
+    icons.forEach(icon => {
+      const randomStart = Math.random() * 10 // Atraso entre 0 e 10 segundos
+      const randomDuration = 10 // Duração constante de 10 segundos
+      icon.style.animationDelay = `${randomStart}s`
+      icon.style.animationDuration = `${randomDuration}s`
+    })
+  </script>
+</html>

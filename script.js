@@ -1,3 +1,14 @@
+// ------------------------------- animação background -------------------------------
+const icons = document.querySelectorAll('.icon')
+
+icons.forEach(icon => {
+  const randomStart = Math.random() * 10 // Atraso entre 0 e 10 segundos
+  const randomDuration = 10 // Duração constante de 10 segundos
+  icon.style.animationDelay = `${randomStart}s`
+  icon.style.animationDuration = `${randomDuration}s`
+})
+// =======================================================
+
 var divBotao = document.getElementById('dark_button')
 var body = document.querySelector('html')
 var darkModeAtivado = true
